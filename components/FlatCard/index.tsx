@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import React from 'react';
 
 const FlatCard = () => {
@@ -13,6 +13,9 @@ const FlatCard = () => {
           <Text>Green</Text>
         </View>
         <View style={[styles.card, styles.card3]}>
+          <Text>White</Text>
+        </View>
+        <View style={[styles.card, styles.card2]}>
           <Text>White</Text>
         </View>
       </View>
@@ -37,7 +40,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 80,
+    height: 100,
+    width: 120,
     borderRadius: 5,
   },
   card1: {
