@@ -1,10 +1,10 @@
 import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
 
-const FancyCard = () => {
+const FancyCard = ({title}: {title: string}) => {
   return (
     <View>
-      <Text style={styles.heading}>Flexbox & Layout</Text>
+      <Text style={styles.heading}>{title}</Text>
       <View style={[styles.card, styles.cardElevated]}>
         <Image
           style={styles.cardImage}
@@ -19,7 +19,7 @@ const FancyCard = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
             enim id excepturi minima repellendus fugiat quasi praesentium
             deleniti, inventore at culpa non reprehenderit deserunt ducimus
-            consequatur, quia animi repudiandae. Dignissimos?
+            consequatur, quia animi repudiandae. Dignissimos?.
           </Text>
         </View>
       </View>
@@ -32,16 +32,43 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     paddingHorizontal: 8,
-    marginBottom: 10,
   },
-  card: {},
-  cardElevated: {},
+  card: {
+    width: 370,
+    height: 360,
+    borderRadius: 5,
+    marginHorizontal: 16,
+    marginVertical: 12,
+  },
+  cardElevated: {
+    backgroundColor: '#F5EFFF',
+    elevation: 4,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+  },
   cardImage: {
     height: 180,
+    marginBottom: 10,
+    borderTopLeftRadius: 5,
+    borderTopRightRadius: 5,
   },
-  cardBody: {},
-  cardTitle: {},
-  cardSubtitle: {},
+  cardBody: {
+    flex: 1,
+    flexGrow: 1,
+    paddingHorizontal: 12,
+  },
+  cardTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
+  cardSubtitle: {
+    fontSize: 15,
+    fontWeight: 'bold',
+    marginBottom: 5,
+  },
   cardDescription: {},
 });
 

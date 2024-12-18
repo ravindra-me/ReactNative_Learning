@@ -1,8 +1,9 @@
-import {View, Text, SafeAreaView, ScrollView} from 'react-native';
+import {SafeAreaView, ScrollView} from 'react-native';
 import React from 'react';
 import FlatCard from './components/FlatCard';
 import ElevatedCard from './components/ElevatedCard';
 import FancyCard from './components/FancyCard';
+import ActionCard from './components/ActionCard';
 
 const App = () => {
   return (
@@ -10,7 +11,9 @@ const App = () => {
       <ScrollView>
         <FlatCard />
         <ElevatedCard />
-        <FancyCard />
+        <FancyCard title={'Flexbox & Layout 1'} />
+        <FancyCard title={'Flexbox & Layout 2'} />
+        <ActionCard />
       </ScrollView>
     </SafeAreaView>
   );
